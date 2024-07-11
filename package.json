@@ -244,7 +244,7 @@
         "strip-json-comments": "^3.1.1",
         "supports-color": "^5.5.0",
         "supports-preserve-symlinks-flag": "^1.0.0",
-        "swagger": "^0.7.5",
+        "swagger": "^0.0.1",
         "swagger-autogen": "^2.23.7",
         "swagger-ui-dist": "^5.11.0",
         "swagger-ui-express": "^5.0.1",
