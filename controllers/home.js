@@ -1,4 +1,4 @@
-const name = { name: 'Teams - Final Project' };
+const name = { name: 'Jennifer Gonzalez - Final Project' };
 
 const justHome = async (req, res) => {
   //#swagger.tags=['Home']
