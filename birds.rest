@@ -1,0 +1,51 @@
+// LOCAL ### GET home GET http://localhost:3001
+
+### GET all birds GET http://localhost:3001/birds
+
+### GET specific bird GET http://localhost:3001/birds/6683ae0b05131bf1957a7028
+
+### Add bird (POST) POST http://localhost:3001/birds Content-Type: application/json
+
+{
+  "name": "Pepper",
+  "species": "Cockatiel",
+  "gender": "Female",
+  "color": "Gray and Yellow"
+}
+
+### Update bird (PUT) PUT http://localhost:3001/birds/6683ae0b05131bf1957a7028 Content-Type: application/json
+
+{
+  "name": "Pepper",
+  "species": "Cockatiel",
+  "gender": "Female",
+  "color": "blue"
+}
+
+### Delete bird DELETE http://localhost:3001/birds/<id>
+
+// PRODUCTION ### GET home GET https://cse341-project2-4i4y.onrender.com
+
+### GET all birds GET https://cse341-project2-4i4y.onrender.com/birds
+
+### GET specific bird GET https://cse341-project2-4i4y.onrender.com/birds/6683ae6105131bf1957a702b
+
+### Add bird (POST bird) POST https://cse341-project2-4i4y.onrender.com/birds Content-Type: application/json
+
+{
+  "name": "Sky",
+  "species": "Budgerigar",
+  "gender": "Female",
+  "color": "Blue and White"
+}
+
+### Change bird information (PUT) PUT https://cse341-project2-4i4y.onrender.com/birds/6683ae6105131bf1957a702b Content-Type: application/json
+
+{
+  "name": "Skitty",
+  "species": "Budgerigar",
+  "gender": "Female",
+  "color": "Blue and White"
+}
+
+### Remove a bird (DELETE) DELETE https://cse341-project2-4i4y.onrender.com/birds/<id>

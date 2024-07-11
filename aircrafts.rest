@@ -1,0 +1,63 @@
+// LOCAL ### GET home GET http://localhost:3001
+
+### GET all aircrafts GET http://localhost:3001/aircrafts
+
+### GET specific aircrafts GET http://localhost:3001/aircrafts/6683b11605131bf1957a702e ### Add aircrafts (POST) POST http://localhost:3001/aircrafts Content-Type: application/json
+
+ {
+      "name": "F/A-18 Super Hornet",
+      "manufacturer": "Boeing",
+      "yearIntroduced": "2019",
+      "maxSpeed": "1,190 mph",
+      "range": "1,250 miles",
+      "engineType": "Turbofan",
+      "role": "Carrier-based Multirole Fighter",
+      "crew": "1-2"
+    }
+### Update aircrafts (PUT) PUT http://localhost:3001/aircrafts/6683b20a05131bf1957a7032 Content-Type: application/json
+
+{
+      "name": "F/A-18 Super Hornet",
+      "manufacturer": "Boeing",
+      "yearIntroduced": "2018",
+      "maxSpeed": "1,190 mph",
+      "range": "1,250 miles",
+      "engineType": "Turbofan",
+      "role": "Carrier-based Multirole Fighter",
+      "crew": "1-2"
+    }
+
+### Delete aircrafts DELETE http://localhost:3001/aircrafts/6683b20a05131bf1957a7032
+
+// PRODUCTION ### GET home GET https://cse341-project2-4i4y.onrender.com
+
+### GET all aircrafts GET https://cse341-project2-4i4y.onrender.com/aircrafts
+
+### GET specific aircrafts GET https://cse341-project2-4i4y.onrender.com/aircrafts/6683b20a05131bf1957a7032
+
+### Add aircrafts (POST aircrafts) POST https://cse341-project2-4i4y.onrender.com/aircrafts Content-Type: application/json
+
+ {
+      "name": "F/A-18 Super Hornet",
+      "manufacturer": "Boeing",
+      "yearIntroduced": "2019",
+      "maxSpeed": "1,190 mph",
+      "range": "1,250 miles",
+      "engineType": "Turbofan",
+      "role": "Carrier-based Multirole Fighter",
+      "crew": "1-2"
+    }
+
+### Change aircrafts information (PUT) PUT https://cse341-project2-4i4y.onrender.com/aircrafts/6683b20a05131bf1957a7032Content-Type: application/json
+
+ {
+      "name": "F/A-18 Super Hornet",
+      "manufacturer": "Boeing",
+      "yearIntroduced": "2018",
+      "maxSpeed": "1,190 mph",
+      "range": "1,250 miles",
+      "engineType": "Turbofan",
+      "role": "Carrier-based Multirole Fighter",
+      "crew": "1-2"
+    }
+### Remove a aircrafts (DELETE) DELETE https://cse341-project2-4i4y.onrender.com/aircrafts/{id}

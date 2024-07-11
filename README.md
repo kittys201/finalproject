@@ -1,2 +1,2 @@
-# finalproject_CSE341
-Porjecto final de CSE342
+# cse341-project2
+cse341-project2
