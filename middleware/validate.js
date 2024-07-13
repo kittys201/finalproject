@@ -6,8 +6,8 @@ const saveBook = (req, res, next) => {
     book_id: 'required|min:1|max:50|string',
     title: 'required|min:1|max:100|string',
     author: 'required|min:1|max:50|string',
-    price: 'required|min:1|max:5|string',
-    inventory: 'required|min:1|max:5|string'
+    price: 'required|min:1|max:10|string',
+    inventory: 'required|min:1|max:10|string'
   };
   validator(req.body, validationRule, {}, (err, status) => {
     if (!status) {
@@ -25,12 +25,12 @@ const saveBook = (req, res, next) => {
 
 const saveReview = (req, res, next) => {
     const validationRule = {
-      review_id: 'required|min:1|max:50|string',
-      book_id: 'required|min:1|max:50|string',
-      user_id: 'required|min:1|max:50|string',
-      rating: 'required|number|min:1|max:5',
-      comment: 'required|string',
-      date: ['required', 'date']
+      review_id: 'required|string|min:1|max:50',
+book_id: 'required|string|min:1|max:50',
+user_id: 'required|string|min:1|max:50',
+rating: 'required|numeric|min:1|max:5',
+comment: 'required|string|min:1|max:50',
+date: ['required', 'regex:/^(19|20)\\d{2}\/(0[1-9]|1[0-2])\/(0[1-9]|[12][0-9]|3[01])$/']
       };
     validator(req.body, validationRule, {}, (err, status) => {
       if (!status) {
@@ -51,7 +51,7 @@ const saveReview = (req, res, next) => {
       user_id: 'required|min:1|max:50|string',
       username: 'required|min:1|max:50|string',
       password: 'required|min:1|max:50|string',
-      email: 'required|email'
+      email:['required', 'regex:/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$/']
       };
     validator(req.body, validationRule, {}, (err, status) => {
       if (!status) {
@@ -73,10 +73,10 @@ const saveReview = (req, res, next) => {
       user_id: 'required|min:1|max:50|string',
       books: Joi.array().items(Joi.object({
         book_id: Joi.string().min(1).max(50).required(),
-        quantity: Joi.number().integer().min(1).required()
+        quantity: Joi.string().min(1).required()
       })).required(),
       order_status: 'required|string',
-      order_date: ['required', 'date']
+      order_date: ['required', 'regex:/^(19|20)\\d{2}\/(0[1-9]|1[0-2])\/(0[1-9]|[12][0-9]|3[01])$/']
       };
     validator(req.body, validationRule, {}, (err, status) => {
       if (!status) {
