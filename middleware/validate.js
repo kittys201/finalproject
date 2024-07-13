@@ -71,10 +71,7 @@ date: ['required', 'regex:/^(19|20)\\d{2}\/(0[1-9]|1[0-2])\/(0[1-9]|[12][0-9]|3[
     const validationRule = {
       order_id: 'required|min:1|max:50|string',
       user_id: 'required|min:1|max:50|string',
-      books: Joi.array().items(Joi.object({
-        book_id: Joi.string().min(1).max(50).required(),
-        quantity: Joi.string().min(1).required()
-      })).required(),
+      books:'required|min:1|max:50|string',
       order_status: 'required|string',
       order_date: ['required', 'regex:/^(19|20)\\d{2}\/(0[1-9]|1[0-2])\/(0[1-9]|[12][0-9]|3[01])$/']
       };

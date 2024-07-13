@@ -26,12 +26,9 @@ const createOrder = async (req, res) => {
   const order = {
     order_id: req.body.order_id,
     user_id: req.body.user_id,
-    books: req.body.books.map(book => ({
-    book_id: book.book_id,
-      quantity: book.quantity
-    })),
+    books: req.body.books,
     order_status: req.body.order_status,
-    order_date: req.body.date
+    order_date: req.body.order_date
   };
   const result = await mongodb.getDatabase().db().collection('orders').insertOne(order);
   if (result.acknowledged) {
