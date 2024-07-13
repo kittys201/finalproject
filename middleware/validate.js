@@ -1,4 +1,4 @@
-/*const validator = require('../helpers/validate');
+const validator = require('../helpers/validate');
 const Joi = require('joi');
 
 const saveBook = (req, res, next) => {
@@ -114,9 +114,9 @@ module.exports = {
   saveUser,
   saveOrder,
   checkMongoId
-};*/
-
-const validator = require('../helpers/validate');
+};
+////Made for Jennifer Gonzalez
+/*const validator = require('../helpers/validate');
 const Joi = require('joi');
 
 const saveBook = (req, res, next) => {
@@ -234,4 +234,4 @@ module.exports = {
   saveUser,
   saveOrder,
   checkMongoId
-};
+};*/

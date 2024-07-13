@@ -1,3 +1,4 @@
+//Made for samuel chacon
 const { ObjectId } = require('mongodb');
 const mongodb = require('../data/database');
 
@@ -26,7 +27,7 @@ const createOrder = async (req, res) => {
     order_id: req.body.order_id,
     user_id: req.body.user_id,
     books: req.body.books.map(book => ({
-      book_id: book.book_id,
+    book_id: book.book_id,
       quantity: book.quantity
     })),
     order_status: req.body.order_status,

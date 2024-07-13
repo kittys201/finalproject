@@ -1,3 +1,4 @@
+//Made for samuel chacon
 const name = { name: 'Jennifer Gonzalez - Final Project' };
 
 const justHome = async (req, res) => {
