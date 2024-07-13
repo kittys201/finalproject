@@ -6,8 +6,8 @@ const saveBook = (req, res, next) => {
     book_id: 'required|min:1|max:50|string',
     title: 'required|min:1|max:100|string',
     author: 'required|min:1|max:50|string',
-    price: 'required|number|min:0',
-    inventory: 'required|integer|min:0'
+    price: 'required|min:1|max:5|string',
+    inventory: 'required|min:1|max:5|string'
   };
   validator(req.body, validationRule, {}, (err, status) => {
     if (!status) {
