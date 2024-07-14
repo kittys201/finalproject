@@ -27,6 +27,7 @@ const createReview = async (req, res) => {
     review_id: req.body.review_id,
     book_id: req.body.book_id,
     user_id: req.body.user_id,
+    rating: req.body.rating,
     comment: req.body.comment,
     date: req.body.date
     };
@@ -45,6 +46,7 @@ const updateReview = async (req, res) => {
     review_id: req.body.review_id,
     book_id: req.body.book_id,
     user_id: req.body.user_id,
+    rating: req.body.rating,
     comment: req.body.comment,
     date: req.body.date
   };

@@ -28,7 +28,7 @@ const saveReview = (req, res, next) => {
       review_id: 'required|string|min:1|max:50',
 book_id: 'required|string|min:1|max:50',
 user_id: 'required|string|min:1|max:50',
-rating: 'required|numeric|min:1|max:5',
+ rating: 'required|numeric|min:1|max:5',
 comment: 'required|string|min:1|max:50',
 date: ['required', 'regex:/^(19|20)\\d{2}\/(0[1-9]|1[0-2])\/(0[1-9]|[12][0-9]|3[01])$/']
       };
